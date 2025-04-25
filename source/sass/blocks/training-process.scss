@@ -1,0 +1,158 @@
+.training-process__title {
+  margin: 0 0 25px;
+  font-size: 16px;
+  line-height: 16px;
+
+  @media (min-width: $vp-tablet) {
+    margin: 0 0 101px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin: 0 0 19px;
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
+
+.training-process__list {
+  position: relative;
+  padding-left: 14px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: 6px;
+    width: 2px;
+    background-color: $color-base-secondary;
+
+    @media (min-width: $vp-tablet) {
+      content: none;
+    }
+
+    @media (min-width: $vp-desktop) {
+      content: "";
+      top: auto;
+      left: 20px;
+      right: 0;
+      bottom: -10px;
+      width: auto;
+      height: 2px;
+    }
+  }
+
+  @media (min-width: $vp-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 135px;
+    row-gap: 103px;
+    justify-content: space-between;
+    padding-left: 0;
+  }
+
+  @media (min-width: $vp-desktop) {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0;
+  }
+}
+
+.training-process__item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 15px;
+  max-width: 85%;
+  font-size: 12px;
+  line-height: 18px;
+
+  @media (min-width: $vp-tablet) {
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 22px
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 8px 10px 0 10px;
+    width: 253px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &--obstacles {
+    @media (min-width: $vp-tablet) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    margin-right: 9px;
+    flex-shrink: 0;
+
+    @media (min-width: $vp-desktop) {
+      margin-right: 10px;
+      height: 30px;
+    }
+  }
+
+  &--tourism::before {
+    @include icons-mask($color-base-primary, url("/__spritemap#sprite-map-view"));
+  }
+
+  &--equipment::before {
+    @include icons-mask($color-base-primary, url("/__spritemap#sprite-shoe-view"));
+  }
+
+  &--ecology::before {
+    @include icons-mask($color-base-primary, url("/__spritemap#sprite-trees-view"));
+  }
+
+  &--obstacles::before {
+    @include icons-mask($color-base-primary, url("/__spritemap#sprite-mountain-view"));
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -29px;
+    width: 14px;
+    height: 14px;
+    background-color: $color-base-secondary;
+    border-radius: 50%;
+
+    @media (min-width: $vp-tablet) {
+      content: none;
+    }
+
+    @media (min-width: $vp-desktop) {
+      content: "";
+      top: auto;
+      transform: none;
+      left: 20px;
+      bottom: -16px;
+    }
+  }
+
+  &--ecology::after {
+    @media (min-width: $vp-desktop) {
+      left: 1px;
+    }
+  }
+}
+
+.training-process__item:not(:last-child) {
+  margin-bottom: 25px;
+
+  @media (min-width: $vp-tablet) {
+    margin: 0;
+  }
+}

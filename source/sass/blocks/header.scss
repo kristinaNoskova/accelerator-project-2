@@ -1,0 +1,116 @@
+.header {
+  position: relative;
+  min-width: 320px;
+  padding: 15px 0 13px;
+  background-color: $color-base-secondary;
+  color: $color-white;
+
+  @media (min-width: $vp-tablet) {
+    padding: 20px 0;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 32px 0;
+  }
+}
+
+.header .container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+  justify-items: end;
+
+  @media (min-width: $vp-tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-items: center;
+    column-gap: 20px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    grid-template-columns: 205px 1fr 160px;
+  }
+}
+
+.header__nav {
+  align-self: start;
+
+  @media (min-width: $vp-tablet) {
+    justify-self: start;
+    align-self: center;
+  }
+
+  @media (min-width: $vp-desktop) {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+  }
+}
+
+.header__img {
+  margin-bottom: 16px;
+  width: 142px;
+  height: 42px;
+
+  @media (min-width: $vp-tablet) {
+    margin: 0;
+  }
+
+  @media (min-width: $vp-desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1;
+    width: 205px;
+    height: 62px;
+  }
+}
+
+.header__img img {
+  display: block;
+}
+
+.header__tel {
+  grid-column: 2;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  color: $color-white;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  @media (min-width: $vp-tablet) {
+    grid-column: 3;
+    justify-self: end;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    grid-row: 1;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &:focus-visible {
+    color: $color-base-primary;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 1;
+    color: $color-state;
+  }
+}
+
+.header__tel.disabled {
+  color: $color-disabled;
+  pointer-events: none;
+}

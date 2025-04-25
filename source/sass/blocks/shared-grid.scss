@@ -1,0 +1,21 @@
+.shared-grid__header {
+  @media (min-width: $vp-mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $vp-tablet) {
+    align-items: flex-start;
+  }
+
+  div {
+    display: none;
+
+    @media (min-width: $vp-mobile) {
+      display: flex;
+      column-gap: 4px;
+      width: 78px;
+    }
+  }
+}

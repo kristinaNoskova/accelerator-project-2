@@ -1,0 +1,41 @@
+.adv {
+  padding: 36px 0 20px;
+
+  @media(min-width: $vp-tablet) {
+    padding: 60px 0 40px;
+  }
+
+  @media(min-width: $vp-desktop) {
+    padding: 136px 0 100px;
+  }
+}
+
+.adv__title {
+  margin-bottom: 37px;
+  text-align: center;
+
+  &::before {
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media(min-width: $vp-desktop) {
+      bottom: 26%;
+      top: auto;
+    }
+  }
+
+  @media(min-width: $vp-tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media(min-width: $vp-desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.adv__slider {
+  @media(min-width: $vp-desktop) {
+    @include width-100vw;
+    overflow: hidden;
+  }
+}

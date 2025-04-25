@@ -1,0 +1,53 @@
+.training {
+  padding: 36px 0 20px;
+
+  @media (min-width: $vp-tablet) {
+    padding: 60px 0 42px;
+  }
+
+  @media(min-width: $vp-desktop) {
+    padding: 63px 0 63px;
+  }
+
+  p {
+    margin: 18px 0 27px;
+
+    @media(min-width: $vp-desktop) {
+      max-width: 70%;
+    }
+  }
+}
+
+.training__title {
+  margin-bottom: 35px;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 34px;
+  }
+
+  @media(min-width: $vp-desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.training__header {
+  margin-bottom: 23px;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media(min-width: $vp-desktop) {
+    margin: 58px 0 12px;
+  }
+}
+
+.training__subtitle {
+  @media (min-width: $vp-tablet) {
+    line-height: 31px;
+  }
+
+  @media(min-width: $vp-desktop) {
+    line-height: 43px;
+  }
+}

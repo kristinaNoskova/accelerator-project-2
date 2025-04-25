@@ -1,0 +1,20 @@
+.сomplexity {
+  display: flex;
+  align-items: center;
+  column-gap: 1px;
+}
+
+.сomplexity__star {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.сomplexity__star--filled {
+  background-image: url("/__spritemap#sprite-star-white-view");
+}
+
+.сomplexity__star--empty {
+  background-image: url("/__spritemap#sprite-star-transparent-view");
+}

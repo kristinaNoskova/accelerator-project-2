@@ -1,0 +1,19 @@
+.training-swiper {
+  width: clamp(290px, 80vw, 350px);
+  margin-bottom: 25px;
+  align-items: stretch;
+
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 27px;
+    width: 100%;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin-bottom: 58px;
+  }
+}
+
+.training-swiper .training-swiper__slide {
+  height: auto;
+}

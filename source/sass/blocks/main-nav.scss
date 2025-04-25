@@ -1,0 +1,217 @@
+.main-nav__menu {
+  position: absolute;
+  padding: 10px 15px 47px;
+  min-width: 320px;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 90;
+  background-color: $color-base-secondary;
+  transform: scaleY(0);
+  opacity: 0;
+  transform-origin: top;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  @media (min-width: $vp-tablet) {
+    padding: 27px 45px 65px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    position: static;
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0;
+    display: flex;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.main-nav--open .main-nav__menu {
+  transform: scaleY(1);
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.main-nav__button {
+  position: relative;
+  z-index: 100;
+  display: block;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  transition: transform 0.3s ease;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    transform-origin: center;
+    transition: transform 0.3s ease, top 0.3s ease;
+  }
+
+  &::before {
+    top: 3.5px;
+  }
+
+  &::after {
+    bottom: 3.5px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    display: none;
+  }
+}
+
+.main-nav--open .main-nav__button {
+  &::before {
+    transform: translateY(-50%) rotate(45deg);
+    top: 50%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(-45deg);
+    top: 50%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+
+.main-nav__button-line {
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 17px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) scaleX(1);
+  transform-origin: left;
+  background-color: $color-white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.main-nav--open .main-nav__button-line {
+  transform: translateY(-50%) scaleX(0);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.main-nav__menu-item:not(:last-child) {
+  margin-bottom: 16px;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin: 0;
+  }
+}
+
+.main-nav__menu-item {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.3s ease 0s;
+
+  @media (min-width: $vp-desktop) {
+    margin: 0;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.main-nav--open .main-nav__menu-item {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
+}
+
+.main-nav--open .main-nav__menu-item:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.main-nav--open .main-nav__menu-item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.main-nav--open .main-nav__menu-item:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.main-nav--open .main-nav__menu-item:nth-child(4) {
+  transition-delay: 0.5s;
+}
+
+.main-nav--open .main-nav__menu-item:nth-child(n+5) {
+  transition-delay: 0.6s;
+}
+
+.main-nav__menu-link {
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  color: $color-white;
+  transition: transform 0.3s ease-in-out;
+
+  @media (min-width: $vp-tablet) {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.64px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    bottom: -3px;
+    left: -2px;
+    right: -2px;
+    transform-origin: center;
+    transform: scaleX(0);
+    background-color: $color-white;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  @media (hover: hover) {
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &:focus-visible {
+    outline-offset: 3px;
+    outline: 1px solid $color-white;
+  }
+
+  &:active {
+    color: $color-state;
+  }
+
+  &:active::before {
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+.main-nav__menu-link.disabled {
+  color: $color-disabled;
+  pointer-events: none;
+}

@@ -1,0 +1,86 @@
+.button {
+  font-family: $ff-primary;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  background-color: $color-transparent;
+  color: $color-base-primary;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button--primary {
+  padding: 19px;
+  text-align: center;
+  color: $color-white;
+  border: 1px solid $color-transparent;
+  background-color: $color-base-secondary;
+}
+
+.button--slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 37px;
+  height: 35px;
+  border: 1px solid $color-transparent;
+  background-color: $color-base-secondary;
+  transition: background-color 0.3s ease,
+    border-color 0.3s ease;
+
+  &::before {
+    @include icons-mask($color-white, url("/__spritemap#sprite-slider-arrow-view"));
+    content: "";
+    display: block;
+    width: 13px;
+    height: 9px;
+    transition: background-color 0.3s ease;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: $color-state;
+      background-color: $color-transparent;
+    }
+
+    &:hover::before {
+      background-color: $color-state;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $color-transparent;
+    border-color: $color-transparent;
+  }
+
+  &:focus-visible::before {
+    background-color: $color-state;
+  }
+
+  &:active {
+    border-color: $color-transparent;
+    background-color: $color-state;
+  }
+
+  &:active::before {
+    background-color: $color-white;
+  }
+
+  &:disabled {
+    border-color: $color-transparent;
+    background-color: $color-disabled;
+    pointer-events: none;
+  }
+
+  &:disabled::before {
+    background-color: $color-white;
+  }
+}
+
+.button--slider-prev {
+  &::before {
+    transform: rotate(-180deg);
+  }
+}

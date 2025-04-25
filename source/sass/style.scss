@@ -1,4 +1,46 @@
 // Vendor
 // ---------------------------------
 
-@import "vendor/normalize";
+@import "./vendor/normalize";
+
+// Global
+// ---------------------------------
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/global";
+@import "./common/fonts";
+@import "./common/visually-hidden";
+@import "./common/container";
+
+// Blocks
+// ---------------------------------
+@import "./blocks/button";
+@import "./blocks/list-reset";
+@import "./blocks/link";
+@import "./blocks/subtitle";
+@import "./blocks/header";
+@import "./blocks/animate";
+@import "./blocks/main-nav";
+@import "./blocks/hero";
+@import "./blocks/hero-slider";
+@import "./blocks/hero-swiper";
+@import "./blocks/tours";
+@import "./blocks/tours-swiper";
+@import "./blocks/tours-content";
+@import "./blocks/shared-grid";
+@import "./blocks/сomplexity";
+@import "./blocks/training";
+@import "./blocks/training-swiper";
+@import "./blocks/training-slider";
+@import "./blocks/training-process";
+@import "./blocks/about";
+@import "./blocks/reviews";
+@import "./blocks/reviews-swiper";
+@import "./blocks/adv";
+@import "./blocks/adv-swiper";
+@import "./blocks/gallery";
+@import "./blocks/gallery-swiper";
+@import "./blocks/form";
+@import "./blocks/contacts";
+@import "./blocks/footer-main";
+@import "./blocks/wrapper-bg";

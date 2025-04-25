@@ -1,0 +1,71 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-src-woff2, $font-src-woff) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: $font-src-woff2, $font-src-woff;
+  }
+}
+
+@mixin icons-mask($bg-color, $mask-image) {
+  mask-image: $mask-image;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $bg-color;
+}
+
+@mixin width-100vw {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+
+@mixin flex-column($al-items: center, $just-cont: flex-start) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $just-cont;
+  align-items: $al-items;
+}
+
+// @mixin button-states {
+//   transition: 0.3s ease-in-out;
+//   transition-property: background-color, color, border-color;
+
+//   @media (hover: hover) {
+//     &:hover {
+//       background-color: $color-white;
+//       color: $color-egyptian-blue;
+//     }
+//   }
+
+//   &:focus-visible {
+//     outline: none;
+//     color: $color-egyptian-blue;
+//     background-color: rgba(255, 255, 255, 0.8);
+//     border-color: $color-black;
+//   }
+
+//   &:active {
+//     background-color: $color-white;
+//     color: $color-black;
+//   }
+
+//   &:disabled {
+//     opacity: 0.5;
+//   }
+// }
+
+// @mixin link-decoration-line($bg-color: $color-base-primary, $height: 1px, $bottom: -6px) {
+//   content: "";
+//   position: absolute;
+//   display: block;
+//   height: $height;
+//   bottom: $bottom;
+//   left: 0;
+//   right: 0;
+//   transform-origin: center;
+//   transform: scaleX(0);
+//   background-color: $bg-color;
+//   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+// }

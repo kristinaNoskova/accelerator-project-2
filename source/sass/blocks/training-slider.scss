@@ -1,0 +1,96 @@
+.training-slider .training-slider__slide {
+  @include flex-column(center);
+  row-gap: 15px;
+  padding: 14px;
+  border: 1px solid rgba(2, 102, 193, 0.10);
+  background-color: $color-white;
+
+  h3 {
+    max-width: 70%;
+    margin: 0;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  p {
+    margin: 0;
+    max-width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+
+.training-slider__img img {
+  display: block;
+  height: 100%;
+
+  @media (min-width: $vp-tablet) {
+    object-position: 50% 31%;
+  }
+
+  @media (min-width: $vp-desktop) {
+    object-position: center center;
+  }
+}
+
+.training-slider__img {
+  height: 200px;
+}
+
+.training-slider__details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  column-gap: 15px;
+}
+
+.training-slider__details-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(45, 56, 63, 0.3);
+  transition: background-color 0.3s ease,
+    border-color 0.3s ease;
+
+  &::before {
+    @include icons-mask($color-base-primary, url("/__spritemap#sprite-vk-view"));
+    content: "";
+    width: 15px;
+    height: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: $color-base-primary;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $color-transparent;
+    border-color: $color-transparent;
+  }
+
+  &:focus-visible::before {
+    background-color: $color-base-primary;
+  }
+
+  &:active {
+    border-color: $color-transparent;
+    background-color: $color-base-secondary;
+  }
+
+  &:active::before {
+    background-color: $color-white;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}

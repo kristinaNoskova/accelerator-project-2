@@ -174,21 +174,22 @@
     font-weight: 400;
     letter-spacing: 0;
     text-transform: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 1px;
+      bottom: -3px;
+      left: -2px;
+      right: -2px;
+      transform-origin: center;
+      transform: scaleX(0);
+      background-color: $color-white;
+      transition: transform 0.3s ease-in-out;
+    }
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 1px;
-    bottom: -3px;
-    left: -2px;
-    right: -2px;
-    transform-origin: center;
-    transform: scaleX(0);
-    background-color: $color-white;
-    transition: transform 0.3s ease-in-out;
-  }
 
   @media (hover: hover) {
     &:hover::before {

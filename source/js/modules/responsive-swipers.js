@@ -26,18 +26,27 @@ const initAdvSlider = () => {
 
   if (breakpointDesktop.matches && !swiperAdv) {
     if(originalSlides.length % 2 !== 0) {
-      const clone = originalSlides[0].cloneNode(true);
-      swiperWrappeElement.appendChild(clone);
+
+      originalSlides.forEach((element) => {
+        const clone = element.cloneNode(true);
+        swiperWrappeElement.appendChild(clone);
+      });
     }
 
     swiperAdv = createSwiperIfExists('.adv-swiper', {
       modules: [Navigation],
       speed: 600,
       loop: true,
-      slidesPerView: 1,
-      centeredSlides: true,
-      initialSlide: 2,
+      slidesPerView: 'auto',
       slidesPerGroup: 2,
+      initialSlide: 2,
+      centeredSlides: true,
+
+      on: {
+        init: function () {
+          this.slideToLoop(2, 0);
+        },
+      },
       breakpoints: {
         1200: {
           spaceBetween: 30,
@@ -49,10 +58,15 @@ const initAdvSlider = () => {
         prevEl: '.adv-swiper__button--prev',
       },
     });
+
   } else if (!breakpointDesktop.matches && swiperAdv) {
     swiperAdv.destroy(true, true);
     swiperAdv = null;
-    swiperWrappeElement.replaceChild(...originalSlides.map((slide) => slide.cloneNode(true)));
+    swiperWrappeElement.innerHTML = '';
+
+    originalSlides.forEach((slide) => {
+      swiperWrappeElement.appendChild(slide.cloneNode(true));
+    });
   }
 };
 
@@ -101,7 +115,7 @@ const initGallerySlider = () => {
       speed: 600,
       loop: true,
       slidesPerView: 2,
-      spaceBetween: 5,
+      spaceBetween: 5.5,
 
       navigation: {
         nextEl: '.gallery__slider-button--next',
@@ -111,6 +125,8 @@ const initGallerySlider = () => {
       breakpoints: {
         560: {
           slidesPerView: 3,
+          spaceBetween: 5,
+
         },
         960: {
           slidesPerView: 4,

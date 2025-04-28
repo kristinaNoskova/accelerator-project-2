@@ -28,44 +28,14 @@
   align-items: $al-items;
 }
 
-// @mixin button-states {
-//   transition: 0.3s ease-in-out;
-//   transition-property: background-color, color, border-color;
 
-//   @media (hover: hover) {
-//     &:hover {
-//       background-color: $color-white;
-//       color: $color-egyptian-blue;
-//     }
-//   }
-
-//   &:focus-visible {
-//     outline: none;
-//     color: $color-egyptian-blue;
-//     background-color: rgba(255, 255, 255, 0.8);
-//     border-color: $color-black;
-//   }
-
-//   &:active {
-//     background-color: $color-white;
-//     color: $color-black;
-//   }
-
-//   &:disabled {
-//     opacity: 0.5;
-//   }
-// }
-
-// @mixin link-decoration-line($bg-color: $color-base-primary, $height: 1px, $bottom: -6px) {
-//   content: "";
-//   position: absolute;
-//   display: block;
-//   height: $height;
-//   bottom: $bottom;
-//   left: 0;
-//   right: 0;
-//   transform-origin: center;
-//   transform: scaleX(0);
-//   background-color: $bg-color;
-//   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-// }
+@mixin bg-cloud($bg-size: cover, $bg-position: center) {
+  background-image:
+    image-set(url('../../img/clouds/clouds-2@1x.webp') 1x type('image/webp'),
+      url('../../img/clouds/clouds-2@2x.webp') 2x type('image/webp'),
+      url('../../img/clouds/clouds-2@1x.png') 1x type('image/png'),
+      url('../../img/clouds/clouds-2@2x.png') 2x type('image/png'));
+  background-repeat: no-repeat;
+  background-position: $bg-position;
+  background-size: $bg-size;
+}

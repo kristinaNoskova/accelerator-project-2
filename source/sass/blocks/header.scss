@@ -1,6 +1,7 @@
 .header {
   position: relative;
   min-width: 320px;
+  z-index: 20;
   padding: 15px 0 13px;
   background-color: $color-base-secondary;
   color: $color-white;
@@ -15,11 +16,13 @@
 }
 
 .header .container {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: repeat(2, auto);
   align-items: center;
   justify-items: end;
+  z-index: 15;
 
   @media (min-width: $vp-tablet) {
     grid-template-columns: repeat(3, 1fr);

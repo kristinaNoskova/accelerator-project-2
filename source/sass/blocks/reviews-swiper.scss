@@ -26,7 +26,8 @@
   @media (min-width: $vp-desktop) {
     width: 700px;
     padding: 19px 40px 19px 19px;
-    box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.10);
+    background-color: $color-white;
+    box-shadow: 0 0 10px 0 rgba(28, 51, 116, 0.10);
   }
 }
 

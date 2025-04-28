@@ -4,7 +4,7 @@ import 'swiper/css/parallax';
 import 'swiper/css/effect-fade';
 import 'swiper/css/mousewheel';
 
-import './modules/menu.js';
+import {initMobileMenu} from './modules/menu.js';
 import {
   initHeroSlider,
   initToursSlider,
@@ -17,6 +17,7 @@ import {
 } from './modules/responsive-swipers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initMobileMenu();
   initHeroSlider();
   initToursSlider();
   initReviewsSlider();

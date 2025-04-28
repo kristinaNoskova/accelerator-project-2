@@ -3,11 +3,13 @@
   overflow: hidden;
 
   @media (min-width: $vp-tablet) {
+    position: relative;
+    z-index: 20;
     padding: 60px 0 20px;
   }
 
   @media (min-width: $vp-desktop) {
-    padding: 146px 0 76px;
+    padding: 146px 0 77px;
   }
 }
 

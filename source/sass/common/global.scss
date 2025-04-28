@@ -16,6 +16,7 @@ html {
 }
 
 .page-body {
+  @include flex-column(stretch);
   min-height: 100%;
   margin: 0;
   min-width: 320px;
@@ -24,12 +25,39 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  overflow-y: visible;
   color: $color-base-primary;
   background-color: $color-white;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(45, 56, 63, 0.60);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    pointer-events: none;
+  }
 
   @media (min-width: $vp-tablet) {
     font-size: 16px;
     line-height: 24px;
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.page-body--overlay {
+  overflow-y: hidden;
+
+  &::before {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 

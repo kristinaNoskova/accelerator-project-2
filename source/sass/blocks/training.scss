@@ -1,12 +1,35 @@
 .training {
   padding: 36px 0 20px;
+  overflow-x: hidden;
 
   @media (min-width: $vp-tablet) {
+    position: relative;
     padding: 60px 0 42px;
+
+    &::before {
+      @include bg-cloud();
+      content: "";
+      position: absolute;
+      display: block;
+      width: 500px;
+      height: 250px;
+      z-index: 10;
+      right: -24.5%;
+      bottom: 17%;
+    }
   }
 
   @media(min-width: $vp-desktop) {
     padding: 63px 0 63px;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 20;
   }
 
   p {

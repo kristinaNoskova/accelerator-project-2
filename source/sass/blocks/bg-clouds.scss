@@ -1,0 +1,52 @@
+.bg-clouds {
+  position: relative;
+  overflow-x: hidden;
+
+  @media(min-width: $vp-tablet) {
+    &::before {
+      @include bg-cloud();
+      content: "";
+      position: absolute;
+      display: block;
+      width: 800px;
+      height: 401px;
+      z-index: 10;
+      left: -32%;
+      transform: translateY(-41%);
+      top: 51%;
+      filter: contrast(97%);
+    }
+
+    &::after {
+      @include bg-cloud();
+      content: "";
+      position: absolute;
+      display: block;
+      width: 717px;
+      height: 260px;
+      z-index: 10;
+      right: -25.5%;
+      bottom: 14%;
+      filter: contrast(97%);
+    }
+  }
+
+  @media(min-width: $vp-desktop) {
+    &::before {
+      width: 1125px;
+      height: 401px;
+      left: -19%;
+      transform: translateY(0);
+      top: 24%;
+    }
+
+    &::after {
+      width: 716px;
+      height: 262px;
+      right: -21%;
+      top: 47.5%;
+      transform: translateY(-50%);
+      bottom: auto;
+    }
+  }
+}

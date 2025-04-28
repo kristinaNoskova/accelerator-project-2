@@ -3,13 +3,11 @@
 
   @media(min-width: $vp-desktop) {
     display: block;
-    width: 380px;
-    overflow: visible;
   }
 }
 
 .adv-swiper .adv-swiper__wrapper {
-  @include flex-column();
+  @include flex-column;
   gap: 15px;
 
   @media(min-width: $vp-tablet) {
@@ -18,7 +16,6 @@
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: center;
-
   }
 
   @media(min-width: $vp-desktop) {
@@ -48,6 +45,7 @@
 .adv-swiper .adv-swiper__item {
   @include flex-column(center);
   padding: 19px 9px;
+  background-color: $color-white;
   border: 1px solid rgba(2, 102, 193, 0.10);
 
   @media(min-width: $vp-tablet) {
@@ -59,16 +57,12 @@
 
   @media(min-width: $vp-desktop) {
     display: flex;
-    // max-width: 380px;
-    max-width: none;
+    max-width: 380px;
+    min-width: 380px;
     min-height: auto;
     height: auto;
     padding: 39px 19px;
   }
-
-  // @media(min-width: 1600px) {
-  //   max-width: 450px;
-  // }
 
   >* {
     margin: 0;

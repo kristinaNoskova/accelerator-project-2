@@ -7,7 +7,8 @@
     padding: 60px 0 42px;
 
     &::before {
-      @include bg-cloud();
+      @include bg-cloud;
+
       content: "";
       position: absolute;
       display: block;
@@ -19,8 +20,8 @@
     }
   }
 
-  @media(min-width: $vp-desktop) {
-    padding: 63px 0 63px;
+  @media (min-width: $vp-desktop) {
+    padding: 63px 0;
 
     &::before {
       content: none;
@@ -35,7 +36,7 @@
   p {
     margin: 18px 0 27px;
 
-    @media(min-width: $vp-desktop) {
+    @media (min-width: $vp-desktop) {
       max-width: 70%;
     }
   }
@@ -48,7 +49,7 @@
     margin-bottom: 34px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     margin-bottom: 32px;
   }
 }
@@ -60,7 +61,7 @@
     margin-bottom: 30px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     margin: 58px 0 12px;
   }
 }
@@ -70,7 +71,7 @@
     line-height: 31px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     line-height: 43px;
   }
 }

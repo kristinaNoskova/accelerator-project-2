@@ -31,16 +31,18 @@
   font-weight: 500;
   line-height: 12px;
   background-color: $color-base-secondary;
+  max-width: 250px;
   color: $color-white;
 
   &::before {
     @include icons-mask($color-white, url("/__spritemap#sprite-pin_filled-view"));
-    content: '';
+    content: "";
     mask-size: 14px;
     width: 16px;
     height: 16px;
     margin-right: 6px;
     mask-position: center;
+    flex-shrink: 0;
   }
 
   @media (min-width: $vp-tablet) {
@@ -62,10 +64,11 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 12px;
+  overflow-wrap: break-word;
   color: $color-white;
 
   &::before {
-    content: '';
+    content: "";
     width: 20px;
     height: 18px;
     margin-right: 12px;
@@ -85,14 +88,12 @@
 .tours-content__title {
   position: relative;
   margin: 0 0 30px;
+  max-width: 90%;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
   color: $color-white;
-
-  @media (min-width: $vp-tablet) {
-    max-width: 90%;
-  }
+  overflow-wrap: break-word;
 
   &::before {
     content: "";
@@ -111,8 +112,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   column-gap: 5px;
   row-gap: 14px;
+
+  @media (min-width: $vp-tablet) {
+    max-width: none;
+  }
 }
 
 .tours-content__details-item {
@@ -135,9 +141,11 @@
 
 .tours-content__details-value {
   padding-right: 1px;
+  width: 100%;
   font-size: 13px;
   font-weight: 700;
   line-height: 13px;
+  overflow-wrap: break-word;
 
   @media (min-width: $vp-desktop) {
     padding-right: 0;

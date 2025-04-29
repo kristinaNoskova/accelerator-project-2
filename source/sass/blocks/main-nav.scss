@@ -2,6 +2,7 @@
   position: absolute;
   padding: 10px 15px 47px;
   min-width: 320px;
+  max-height: 360px;
   left: 0;
   right: 0;
   top: 100%;
@@ -9,20 +10,25 @@
   background-color: $color-base-secondary;
   transform: scaleY(0);
   opacity: 0;
+  overflow-y: auto;
   transform-origin: top;
   transition: transform 0.3s ease, opacity 0.3s ease;
 
   @media (min-width: $vp-tablet) {
     padding: 27px 45px 65px;
+    max-height: 400px;
   }
 
   @media (min-width: $vp-desktop) {
     position: static;
     grid-column: 2;
     grid-row: 1;
+    overflow-y: auto;
+    max-height: none;
     padding: 0;
     display: flex;
     column-gap: 30px;
+    row-gap: 15px;
     flex-wrap: wrap;
     align-items: center;
     transform: scaleY(1);

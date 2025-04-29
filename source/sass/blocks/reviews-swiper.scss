@@ -12,7 +12,7 @@
   height: 100%;
   padding: 19px;
   border: 1px solid $color-white;
-  box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.10);
+  box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
 
   @media (min-width: $vp-tablet) {
     display: flex;
@@ -20,14 +20,14 @@
     column-gap: 30px;
     width: 565px;
     padding: 19px 30px 19px 19px;
-    box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.10);
+    box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
   }
 
   @media (min-width: $vp-desktop) {
     width: 700px;
     padding: 19px 40px 19px 19px;
     background-color: $color-white;
-    box-shadow: 0 0 10px 0 rgba(28, 51, 116, 0.10);
+    box-shadow: 0 0 10px 0 rgba(28, 51, 116, 0.1);
   }
 }
 
@@ -49,6 +49,7 @@
 .reviews-swiper__content {
   @media (min-width: $vp-tablet) {
     padding-top: 4px;
+
     @include flex-column(flex-start);
   }
 

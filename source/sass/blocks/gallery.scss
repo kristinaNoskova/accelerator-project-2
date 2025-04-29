@@ -1,26 +1,27 @@
 .gallery {
-  padding: 36px 0 3px;
+  padding: 36px 0 0;
+  margin-bottom: 3px;
 
-  @media(min-width: $vp-tablet) {
-    padding: 60px 0 3px;
+  @media (min-width: $vp-tablet) {
+    padding: 60px 0 0;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     padding: 123px 0 0;
-    margin-bottom: 3px;
   }
 
   p {
     margin: 15px 0 0;
     font-size: 12px;
     line-height: 18px;
+    color: $color-base-primary;
 
-    @media(min-width: $vp-tablet) {
+    @media (min-width: $vp-tablet) {
       font-size: 14px;
       line-height: 22px;
     }
 
-    @media(min-width: $vp-desktop) {
+    @media (min-width: $vp-desktop) {
       font-size: 16px;
       line-height: 24px;
     }
@@ -34,11 +35,11 @@
 .gallery .gallery__header-content {
   display: block;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     width: 60%;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     width: 55%;
   }
 }
@@ -47,11 +48,11 @@
   margin: 0 0 31px;
   align-items: flex-end;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     margin: 0 0 21px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     margin: 0 0 45px;
   }
 }
@@ -59,11 +60,11 @@
 .gallery__header .gallery__slider-buttons {
   display: none;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     display: flex;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     display: none;
   }
 }
@@ -73,13 +74,13 @@
   font-size: 22px;
   line-height: 22px;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     margin-bottom: 30px;
     font-size: 25px;
     line-height: 25px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     margin-bottom: 24px;
     font-size: 35px;
     line-height: 100%;

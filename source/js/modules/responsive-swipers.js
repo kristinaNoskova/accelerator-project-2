@@ -82,6 +82,7 @@ const initTrainingSlider = () => {
       slidesPerView: 1,
       spaceBetween: 16,
       initialSlide: breakpointMobile.matches ? 2 : 0,
+      observer: true,
 
       navigation: {
         nextEl: '.training__slider-button--next',

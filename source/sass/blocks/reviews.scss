@@ -15,6 +15,7 @@
 
 .reviews__slider-wrapper {
   @include width-100vw;
+
   overflow: hidden;
   padding: 15px;
 
@@ -22,12 +23,16 @@
     padding: 20px 0 20px 20px;
     margin-left: -20px;
     width: auto;
-    margin-right: calc((100vw - 100%)* -1);
+    margin-right: calc((100vw - 100%) * -1);
   }
 
   @media (min-width: $vp-desktop) {
     padding: 10px 0 10px 10px;
     margin-left: 0;
+  }
+
+  @media (min-width: $vp-desktop-wide) {
+    max-width: 1600px;
   }
 }
 
@@ -40,5 +45,14 @@
 
   @media (min-width: $vp-desktop) {
     margin-bottom: 28px;
+  }
+}
+
+.reviews__title {
+  @media (min-width: $vp-desktop) {
+    &::before {
+      top: auto;
+      bottom: 53%;
+    }
   }
 }

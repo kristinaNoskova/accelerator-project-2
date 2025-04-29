@@ -2,9 +2,10 @@
   position: relative;
   overflow-x: hidden;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     &::before {
-      @include bg-cloud();
+      @include bg-cloud;
+
       content: "";
       position: absolute;
       display: block;
@@ -18,7 +19,8 @@
     }
 
     &::after {
-      @include bg-cloud();
+      @include bg-cloud;
+
       content: "";
       position: absolute;
       display: block;
@@ -31,7 +33,7 @@
     }
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     &::before {
       width: 1125px;
       height: 401px;

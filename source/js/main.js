@@ -16,6 +16,8 @@ import {
   initGallerySlider
 } from './modules/responsive-swipers.js';
 
+import './modules/form-validate.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initHeroSlider();
@@ -25,3 +27,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initAdvSlider();
   initGallerySlider();
 });
+

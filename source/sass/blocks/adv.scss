@@ -3,7 +3,7 @@
   min-width: 320px;
   margin: 0 auto;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     position: relative;
     z-index: 20;
     padding: 60px 0 40px;
@@ -11,7 +11,7 @@
     margin: 0;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     padding: 135px 0 100px;
   }
 }
@@ -24,23 +24,23 @@
     left: 50%;
     transform: translateX(-50%);
 
-    @media(min-width: $vp-desktop) {
+    @media (min-width: $vp-desktop) {
       bottom: 26%;
       top: auto;
     }
   }
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     margin-bottom: 60px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     margin-bottom: 50px;
   }
 }
 
 .adv__slider {
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     overflow: hidden;
   }
 }

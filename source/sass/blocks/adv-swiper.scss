@@ -1,16 +1,21 @@
 .adv-swiper.swiper {
   display: flex;
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     display: block;
+  }
+
+  @media (min-width: $vp-desktop-wide) {
+    max-width: 2066px;
   }
 }
 
 .adv-swiper .adv-swiper__wrapper {
   @include flex-column;
+
   gap: 15px;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     flex-direction: row;
     gap: 30px;
     flex-wrap: wrap;
@@ -18,7 +23,7 @@
     justify-content: center;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     flex-wrap: nowrap;
     gap: 0;
     margin-bottom: 50px;
@@ -29,7 +34,7 @@
 .adv-swiper__buttons {
   display: none;
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,23 +49,23 @@
 
 .adv-swiper .adv-swiper__item {
   @include flex-column(center);
+
   padding: 19px 9px;
   background-color: $color-white;
-  border: 1px solid rgba(2, 102, 193, 0.10);
+  border: 1px solid rgba(2, 102, 193, 0.1);
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     max-width: 324px;
     padding: 29px 19px;
     min-height: 340px;
-    height: 100%;
+    height: auto;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     display: flex;
     max-width: 380px;
     min-width: 380px;
     min-height: auto;
-    height: auto;
     padding: 39px 19px;
   }
 
@@ -82,14 +87,14 @@
     line-height: 14px;
     text-align: center;
 
-    @media(min-width: $vp-tablet) {
+    @media (min-width: $vp-tablet) {
       max-width: 255px;
       margin-top: 25px;
       font-size: 16px;
       line-height: 16px;
     }
 
-    @media(min-width: $vp-desktop) {
+    @media (min-width: $vp-desktop) {
       max-width: 100%;
       margin-top: 30px;
       font-size: 18px;
@@ -102,7 +107,7 @@
     font-size: 12px;
     line-height: 18px;
 
-    @media(min-width: $vp-tablet) {
+    @media (min-width: $vp-tablet) {
       font-size: 14px;
       line-height: 22px;
     }
@@ -120,12 +125,12 @@
     background-position: center center;
     border: 1px solid $color-base-secondary;
 
-    @media(min-width: $vp-tablet) {
+    @media (min-width: $vp-tablet) {
       width: 48px;
       height: 48px;
     }
 
-    @media(min-width: $vp-desktop) {
+    @media (min-width: $vp-desktop) {
       width: 54px;
       height: 54px;
     }

@@ -17,6 +17,7 @@ html {
 
 .page-body {
   @include flex-column(stretch);
+
   min-height: 100%;
   margin: 0;
   min-width: 320px;
@@ -33,7 +34,7 @@ html {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(45, 56, 63, 0.60);
+    background: rgba(45, 56, 63, 0.6);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease;

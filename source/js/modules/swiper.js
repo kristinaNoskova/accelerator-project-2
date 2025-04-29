@@ -13,6 +13,7 @@ const initHeroSlider = () => {
     simulateTouch: true,
     touchRatio: 1,
     parallax: true,
+    autoHeight: true,
     pagination: {
       el: '.hero-swiper__pagination',
       type: 'bullets',
@@ -21,7 +22,6 @@ const initHeroSlider = () => {
       bulletActiveClass: 'hero-swiper__pagination-bullet--active',
       bulletElement: 'button',
     },
-    resizeObserver: false,
     observer: true,
   });
 };
@@ -65,8 +65,7 @@ const initReviewsSlider = () => {
         spaceBetween: 30,
         slidesOffsetAfter: 200,
         centeredSlides: false,
-        autoHeight: false,
-
+        // autoHeight: false,
       },
 
       1200: {
@@ -88,4 +87,3 @@ export {
   initToursSlider,
   initReviewsSlider,
 };
-

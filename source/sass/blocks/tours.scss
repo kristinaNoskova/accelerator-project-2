@@ -1,5 +1,6 @@
 .tours {
   padding: 38px 0 20px;
+  overflow-x: hidden;
 
   @media (min-width: $vp-tablet) {
     padding: 60px 0 40px;
@@ -35,6 +36,7 @@
 .tours__all {
   display: flex;
   align-items: center;
+  max-width: 250px;
   padding: 10px;
   margin: 0 auto;
   width: max-content;
@@ -47,6 +49,8 @@
   transition: color 0.3s ease;
 
   @media (min-width: $vp-tablet) {
+    max-width: 350px;
+    width: max-content;
     font-size: 16px;
     line-height: 16px;
     letter-spacing: 0.64px;
@@ -54,7 +58,9 @@
 
   &::after {
     @include icons-mask($color-base-primary, url("/__spritemap#sprite-link-arrow-view"));
+
     content: "";
+    flex-shrink: 0;
     margin-left: 11px;
     width: 9px;
     height: 12px;
@@ -64,11 +70,11 @@
 
   @media (hover: hover) {
     &:hover {
-      color: rgba(2, 102, 193, 0.10);
+      color: rgba(2, 102, 193, 0.1);
     }
 
     &:hover::after {
-      background-color: rgba(2, 102, 193, 0.10);
+      background-color: rgba(2, 102, 193, 0.1);
     }
   }
 

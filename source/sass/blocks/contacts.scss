@@ -1,15 +1,16 @@
 .contacts {
   padding: 36px 0 19px;
 
-  @media(min-width: $vp-tablet) {
-    padding: 60px 0 39px
+  @media (min-width: $vp-tablet) {
+    padding: 60px 0 39px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     padding: 124px 0 54px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    column-gap: 15px
   }
 
   p {
@@ -18,21 +19,22 @@
     font-weight: 400;
     line-height: 20px;
 
-    @media(min-width: $vp-tablet) {
+    @media (min-width: $vp-tablet) {
       margin: 0 0 40px;
       max-width: 80%;
       font-size: 16px;
       line-height: 24px;
     }
 
-    @media(min-width: $vp-desktop) {
+    @media (min-width: $vp-desktop) {
       margin: 0 0 50px;
+      max-width: 95%;
     }
   }
 }
 
 .contacts__wrap-content {
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     max-width: 604px;
   }
 }
@@ -40,25 +42,28 @@
 .contacts__subtitle {
   margin-bottom: 29px;
 
-  @media(min-width: $vp-tablet) {
-    margin-bottom: 20px;
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 21px;
   }
 }
 
 .contacts__list {
   margin-bottom: 30px;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     @include width-100vw;
+
     padding: 0 42px 0 45px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 40px;
-    margin-bottom: 42px;
+    row-gap: 15px;
+    margin-bottom: 41px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     @include flex-column(flex-start);
+
     width: 100%;
     margin-left: 0;
     padding: 0;
@@ -69,7 +74,7 @@
 .contacts__item:not(:last-child) {
   margin-bottom: 30px;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     margin-bottom: 0;
   }
 }
@@ -80,11 +85,11 @@
   align-items: center;
   column-gap: 10px;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     grid-template-columns: 24px 1fr;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     column-gap: 32px;
   }
 
@@ -97,14 +102,14 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @media(min-width: $vp-tablet) {
+    @media (min-width: $vp-tablet) {
       width: 24px;
       height: 24px;
       grid-row: 1 / 3;
       align-self: start;
     }
 
-    @media(min-width: $vp-desktop) {
+    @media (min-width: $vp-desktop) {
       width: 26px;
       height: 26px;
       align-self: center;
@@ -133,13 +138,13 @@
   font-weight: 600;
   line-height: 14px;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     margin-bottom: 6px;
     font-size: 16px;
     line-height: 16px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     margin-bottom: 8px;
     font-size: 18px;
     line-height: 18px;
@@ -157,11 +162,11 @@
   line-height: 20px;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     max-width: 100%;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -210,13 +215,14 @@
 
 .contacts__wrap-img {
   @include width-100vw;
+
   height: 343px;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     height: 340px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     width: 600px;
     height: 349px;
     padding-top: 25px;

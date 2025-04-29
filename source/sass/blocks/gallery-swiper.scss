@@ -1,11 +1,15 @@
 .gallery-swiper {
-  @media(max-width: $vp-mobile) {
+  @media (max-width: $vp-mobile) {
     height: 266px;
+  }
+
+  @media (min-width: $vp-desktop-wide) {
+    max-width: 2066px;
   }
 }
 
 .gallery-swiper__wrapper.swiper-wrapper {
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 5px;
@@ -22,26 +26,25 @@
   grid-template-rows: minmax(133px, auto) minmax(125px, auto);
   row-gap: 6.2px;
 
-  @media(min-width: $vp-tablet) {
+  @media (min-width: $vp-tablet) {
     grid-template-rows: 210px 202px;
   }
 
-  @media(min-width: $vp-desktop) {
+  @media (min-width: $vp-desktop) {
     grid-template-rows: minmax(233px, auto) minmax(223px, auto);
   }
-
 }
 
 .gallery-swiper__slide:not(.gallery-swiper__slide-row-2) {
   img {
     min-height: 266px;
 
-    @media(min-width: $vp-tablet) {
+    @media (min-width: $vp-tablet) {
       height: 418px;
       object-fit: fill;
     }
 
-    @media(min-width: $vp-desktop) {
+    @media (min-width: $vp-desktop) {
       min-height: 463px;
       height: auto;
       max-height: 700px;

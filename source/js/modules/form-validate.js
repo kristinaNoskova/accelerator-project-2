@@ -39,8 +39,11 @@ const validateInput = (input, regex, emptyMessage, invalidMessage) => {
 
 [inputPhone, inputEmail].forEach((input) => {
   input.addEventListener('input', () => {
-    input.setCustomValidity('');
+    input.setCustomValidity(' ');
     input.parentElement.classList.remove('form__wrap-input--error');
+    input.blur();
+    input.focus();
+
     if (input.id === 'phone') {
       input.value = inputPhone.value.replace(REGEXP.numbers, '');
     }
@@ -78,5 +81,8 @@ const submitForm = (evt) => {
   formElement.reset();
 };
 
-formElement.addEventListener('submit', submitForm);
-export {};
+const initFormSubmit = () => {
+  formElement.addEventListener('submit', submitForm);
+};
+
+export {initFormSubmit};

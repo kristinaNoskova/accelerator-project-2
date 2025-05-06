@@ -5,7 +5,7 @@
 }
 
 .hero-slider__img {
-  background-color: #5F85AF;
+  background-color: #5f85af;
 
   img {
     position: relative;
@@ -57,7 +57,7 @@
   }
 
   h2 {
-    margin: 0 0 15px;
+    margin: 0 0 10px;
     font-size: 26px;
     font-weight: 800;
     line-height: 26px;
@@ -70,7 +70,7 @@
     }
 
     @media (min-width: $vp-desktop) {
-      margin: 0 0 23px;
+      margin: 0 0 13px;
       max-width: 79%;
       text-align: start;
       font-size: 77px;
@@ -79,7 +79,7 @@
   }
 
   p {
-    margin: 0 0 60px;
+    margin: 5px 0 60px;
     font-size: 15px;
     font-weight: 400;
     line-height: 20px;
@@ -87,24 +87,18 @@
     color: $color-white;
 
     @media (min-width: $vp-tablet) {
-      margin: 0 0 35px;
+      margin: 5px 0 35px;
       max-width: 70%;
       font-size: 17px;
       line-height: 24px;
     }
 
     @media (min-width: $vp-desktop) {
-      margin: 0 0 37px;
+      margin: 10px 0 37px;
       max-width: 38%;
       text-align: start;
       font-size: 17px;
       line-height: 24px;
-    }
-  }
-
-  @media (min-width: $vp-desktop) {
-    div {
-      margin-bottom: auto;
     }
   }
 }
@@ -113,6 +107,7 @@
   display: block;
   width: 180px;
   outline: none;
+  opacity: 1;
   transition:
     background-color 0.3s ease 0.1s,
     color 0.3s ease,
@@ -140,6 +135,10 @@
     color: $color-white;
     background-color: $color-disabled;
     pointer-events: none;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin-bottom: auto;
   }
 }
 

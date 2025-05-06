@@ -16,7 +16,7 @@ import {
   initGallerySlider
 } from './modules/responsive-swipers.js';
 
-import './modules/form-validate.js';
+import {initFormSubmit} from './modules/form-validate.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
@@ -26,5 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initTrainingSlider();
   initAdvSlider();
   initGallerySlider();
+  initFormSubmit();
 });
-

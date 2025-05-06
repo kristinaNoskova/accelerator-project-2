@@ -1,19 +1,38 @@
 import {createSwiperIfExists} from './utils';
-import {Navigation, Pagination, Parallax, EffectFade} from 'swiper/modules';
+import {Navigation, Pagination, A11y} from 'swiper/modules';
+
+const observeSlideChanges = (swiperInstance) => {
+  const target = swiperInstance.slides[swiperInstance.activeIndex];
+  if (!target) {
+    return;
+  }
+
+  const observer = new MutationObserver(() => {
+    swiperInstance.updateAutoHeight();
+  });
+
+  observer.observe(target, {
+    childList: true,
+    subtree: true,
+    characterData: true,
+  });
+
+  return observer;
+};
 
 const initHeroSlider = () => {
   createSwiperIfExists('.hero-swiper', {
     loop: true,
     speed: 800,
     slidesPerView: 1,
-    modules: [Pagination, Parallax, EffectFade],
-    effect: 'fade',
-    ease: 'easeInOutCubic',
-    watchSlidesVisibility: true,
+    modules: [Pagination, A11y],
     simulateTouch: true,
-    touchRatio: 1,
-    parallax: true,
+    touchRatio: 1.5,
+    threshold: 10,
     autoHeight: true,
+    a11y: {
+      paginationBulletMessage: 'Перейти к слайду {{index}}',
+    },
     pagination: {
       el: '.hero-swiper__pagination',
       type: 'bullets',
@@ -23,6 +42,15 @@ const initHeroSlider = () => {
       bulletElement: 'button',
     },
     observer: true,
+    observeParents: true,
+    on: {
+      init(swiper) {
+        observeSlideChanges(swiper);
+      },
+      slideChange(swiper) {
+        swiper.updateAutoHeight();
+      },
+    },
   });
 };
 
@@ -65,7 +93,6 @@ const initReviewsSlider = () => {
         spaceBetween: 30,
         slidesOffsetAfter: 200,
         centeredSlides: false,
-        // autoHeight: false,
       },
 
       1200: {

@@ -252,6 +252,7 @@
   }
 }
 
-.form__wrap-input--error input {
+.form__wrap-input--error input,
+.form__wrap-input--error input:focus-visible {
   border-color: $color-error;
 }

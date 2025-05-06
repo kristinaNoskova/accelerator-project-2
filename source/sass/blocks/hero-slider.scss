@@ -4,6 +4,13 @@
   width: 100%;
 }
 
+.hero-slider__slide.swiper-slide-active {
+  .hero-slider__link {
+    opacity: 1;
+    transition: opacity 0.9s ease-in-out 0.4s;
+  }
+}
+
 .hero-slider__img {
   background-color: #5f85af;
 
@@ -107,8 +114,9 @@
   display: block;
   width: 180px;
   outline: none;
-  opacity: 1;
+  opacity: 0;
   transition:
+    opacity 0.2s ease-in-out,
     background-color 0.3s ease 0.1s,
     color 0.3s ease,
     border-color 0.3s ease;

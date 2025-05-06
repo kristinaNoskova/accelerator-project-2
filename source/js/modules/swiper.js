@@ -1,5 +1,5 @@
 import {createSwiperIfExists} from './utils';
-import {Navigation, Pagination, A11y} from 'swiper/modules';
+import {Navigation, Pagination, A11y, Parallax, EffectFade} from 'swiper/modules';
 
 const observeSlideChanges = (swiperInstance) => {
   const target = swiperInstance.slides[swiperInstance.activeIndex];
@@ -25,7 +25,11 @@ const initHeroSlider = () => {
     loop: true,
     speed: 800,
     slidesPerView: 1,
-    modules: [Pagination, A11y],
+    modules: [Pagination, A11y, Parallax, EffectFade],
+    effect: 'fade',
+    ease: 'easeInOutCubic',
+    watchSlidesVisibility: true,
+    parallax: true,
     simulateTouch: true,
     touchRatio: 1.5,
     threshold: 10,
@@ -41,6 +45,7 @@ const initHeroSlider = () => {
       bulletActiveClass: 'hero-swiper__pagination-bullet--active',
       bulletElement: 'button',
     },
+    resizeObserver: false,
     observer: true,
     observeParents: true,
     on: {

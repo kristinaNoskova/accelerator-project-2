@@ -57,16 +57,27 @@ export default {
       cacheLocation: './.cache',
     }),
   ],
-  css: {
-    devSourcemap: true
-  },
-  publicDir: 'public',
   root: './source',
+  publicDir: 'public',
+  base: '/accelerator-project-2/',
   build: {
-    outDir: '../dist',
+    outDir: '../dist', // ВАЖНО: две точки, чтобы выйти из source/
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (/\.(png|jpe?g|webp|svg|woff2?|ttf|otf|eot)$/i.test(assetInfo.name)) {
+            return 'assets/[name][extname]'; // без хеша
+          }
+          return 'assets/[name]-[hash][extname]'; // остальные с хешем
+        },
+      },
+    },
   },
-  base: '/accelerator-project-2/assets/',
   server: {
     port: 3000,
-  }
+  },
+  css: {
+    devSourcemap: true,
+  },
 };

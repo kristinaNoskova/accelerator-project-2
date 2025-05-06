@@ -1,5 +1,10 @@
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 // import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 /** @type {import('vite').UserConfig} */
@@ -57,27 +62,21 @@ export default {
       cacheLocation: './.cache',
     }),
   ],
-  root: './source',
-  publicDir: 'public',
-  base: '/accelerator-project-2/',
-  build: {
-    outDir: '../dist', // ВАЖНО: две точки, чтобы выйти из source/
-    assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        assetFileNames: (assetInfo) => {
-          if (/\.(png|jpe?g|webp|svg|woff2?|ttf|otf|eot)$/i.test(assetInfo.name)) {
-            return 'assets/[name][extname]'; // без хеша
-          }
-          return 'assets/[name]-[hash][extname]'; // остальные с хешем
-        },
-      },
-    },
+  css: {
+    devSourcemap: true
   },
+  publicDir: 'public',
+  root: './source',
+  build: {
+    outDir: '../dist',
+  },
+  base: '/accelerator-project-2/',
   server: {
     port: 3000,
   },
-  css: {
-    devSourcemap: true,
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'source'),
+    },
   },
 };

@@ -4,10 +4,10 @@
   justify-content: center;
   min-height: 638px;
   background-image:
-    image-set("../../img/form/form-mobile@1x.webp" type("image/webp") 1x,
-    "../../img/form/form-mobile@2x.webp" type("image/webp") 2x,
-    "../../img/form/form-mobile@1x.jpg" type("image/jpeg") 1x,
-    "../../img/form/form-mobile@2x.jpg" type("image/jpeg") 2x);
+    image-set("@/img/form/form-mobile@1x.webp" type("image/webp") 1x,
+      "@/img/form/form-mobile@2x.webp" type("image/webp") 2x,
+      "@/img/form/form-mobile@1x.jpg" type("image/jpeg") 1x,
+      "@/img/form/form-mobile@2x.jpg" type("image/jpeg") 2x);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -17,19 +17,19 @@
   @media (min-width: $vp-tablet) {
     min-height: 680px;
     background-image:
-      image-set("../../img/form/form-tablet@1x.webp" type("image/webp") 1x,
-      "../../img/form/form-tablet@2x.webp" type("image/webp") 2x,
-      "../../img/form/form-tablet@1x.jpg" type("image/jpeg") 1x,
-      "../../img/form/form-tablet@2x.jpg" type("image/jpeg") 2x);
+      image-set("@/img/form/form-tablet@1x.webp" type("image/webp") 1x,
+        "@/img/form/form-tablet@2x.webp" type("image/webp") 2x,
+        "@/img/form/form-tablet@1x.jpg" type("image/jpeg") 1x,
+        "@/img/form/form-tablet@2x.jpg" type("image/jpeg") 2x);
   }
 
   @media (min-width: $vp-desktop) {
     min-height: 760px;
     background-image:
-      image-set("../../img/form/form@1x.webp" type("image/webp") 1x,
-      "../../img/form/form@2x.webp" type("image/webp") 2x,
-      "../../img/form/form@1x.jpg" type("image/jpeg") 1x,
-      "../../img/form/form@2x.jpg" type("image/jpeg") 2x);
+      image-set("@/img/form/form@1x.webp" type("image/webp") 1x,
+        "@/img/form/form@2x.webp" type("image/webp") 2x,
+        "@/img/form/form@1x.jpg" type("image/jpeg") 1x,
+        "@/img/form/form@2x.jpg" type("image/jpeg") 2x);
   }
 
   .container {
@@ -209,8 +209,8 @@
       pointer-events: none;
     }
 
-    &:focus + label,
-    &:not(:placeholder-shown) + label {
+    &:focus+label,
+    &:not(:placeholder-shown)+label {
       transform: translateY(-180%);
       opacity: 0;
     }

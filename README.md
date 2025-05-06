@@ -11,7 +11,7 @@
   
 ## 🌐 Демо-сайт
 
-[![Перейти на сайт](https://img.shields.io/badge/ПОСМОТРЕТЬ_САЙТ-ff6f61?style=for-the-badge&logo=githubpages&logoColor=white)](https://kristinanoskova.github.io/accelerator-project-2/)
+[![Перейти на сайт](https://img.shields.io/badge/DEMO_GITHUB_PAGES-8957e5?style=for-the-badge&logo=github&logoColor=white)](https://kristinanoskova.github.io/accelerator-project-2/)
 
 ## ⚙️ Технологии
 
